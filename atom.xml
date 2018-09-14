@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-14T08:09:25.000Z</updated>
+  <updated>2018-09-14T08:30:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/09/14/%E6%9A%97%E5%BD%B1%E7%B2%BE%E7%81%B53%20PLUS%20%E5%AE%89%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+    <id>http://yoursite.com/2018/09/14/暗影精灵3 PLUS 安装黑苹果/</id>
+    <published>2018-09-14T08:30:33.330Z</published>
+    <updated>2018-09-14T08:30:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>折腾黑苹果有风险，大家注意，文章仅供参考！</strong></p><p>首先先说一下尚未解决的问题（有的目前还没有人折腾出来，有的是我实在折腾不下去了…）：</p><blockquote>  <p>1.屏幕亮度无法调节（可以勉强使用软件代替，差不多的功效） <br>  2.摄像头无法使用（这个好像可以解决，但是我实在是懒啊…） <br>  3.不支持自带的无线网卡，可以选择自己更换或使用usb无线网卡（这个目前实在是没办法软件解决）</p></blockquote><hr><hr><hr><p>前提：你的硬盘是GPT格式</p><p>1.首先是制作Mac安装盘，最好使用16GB以上的U盘，并做好U盘备份，因为U盘需要格式化</p><blockquote>  <p>这边用到的工具是TransMac（我提供了我自己用的TransMac的CSDN下载，只要一积分大家支持一下，如果没积分的可以自行百度，很多的）： <br>   <a href="https://download.csdn.net/download/mryangll/10526957" target="_blank" rel="noopener">TransMac下载地址</a> <br>    . <br>   系统使用的是High Sierra（10.13.5）提供百度云下载： <br>   链接：<a href="https://pan.baidu.com/s/1zcj_wXwN0VXGBMV0yo1tYQ" target="_blank" rel="noopener">百度云链接</a> 密码：2aq2 <br>    . <br>   制作教程我就不写了，安装这个百度经验的来就OK：<a href="https://jingyan.baidu.com/article/a3761b2ba30d571576f9aa25.html" target="_blank" rel="noopener"><em>TransMac制作MacOS启动盘</em></a></p></blockquote><p>2.制作完USB启动盘后先不要急着重启，我的电脑进入到EFI盘（如果系统没有出现EFI这个盘，那么下载<a href="http://www.diskgenius.cn/" target="_blank" rel="noopener">DiskGenius</a>，从软件中找到USB的EFI盘进行操作），把原先EFI下的Clover文件夹移动到其他地方备份起来，使用我提供的Clover文件放入EFI目录下（记住，是把原先的删掉，在放入我提供的这个，不是合并）</p><blockquote>  <p><a href="https://download.csdn.net/download/mryangll/10527026" target="_blank" rel="noopener">EFI文件下载地址</a></p></blockquote><p>3.重启，按F9选择启动方式，选择USB启动盘启动，进入Clover后应该就两个图标，一个windows启动盘，一个是Mac系统的安装，直接回车选择安装MacOS，等待开起来后：</p><p>选择一下语言， <br><img src="https://img-blog.csdn.net/20180707154736586?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yWWFuZ0xM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" title=""> <br>打开磁盘工具， <br><img src="https://img-blog.csdn.net/20180707154925216?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yWWFuZ0xM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" title=""> <br>选择你要安装系统的磁盘，选择抹掉，名称自取，格式为APFS <br><img src="https://img-blog.csdn.net/20180707155106284?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yWWFuZ0xM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" title=""> <br>退出磁盘工具，开始安装系统 <br><img src="https://img-blog.csdn.net/20180707155408756?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yWWFuZ0xM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" title=""> <br>等待完毕后系统会自动重启，我们再次进入USB启动盘，这时刚进Clover应该默认选在下一步要进入的那个图标上面（<strong>我没有截图，就盗用了一下别人的图<a href="http://baijiahao.baidu.com/s?id=1579144215405327877&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">http://baijiahao.baidu.com/s?id=1579144215405327877&amp;wfr=spider&amp;for=pc</a></strong>，应该就是叫做Boot OS x install 什么的）： <br><img src="https://img-blog.csdn.net/20180707155712281?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yWWFuZ0xM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" title=""> <br>进入之后又是安装，这次才是真正的安装把，之前那个应该是拷贝文件到磁盘（<strong>注意</strong>：在我的暗影精灵3plus上进行这步操作的时候进入安装界面又马上重启了，不要担心，在重新进入一次就可以了），安装完毕后又会重启，一样地进入USB启动盘，这次又多了一个入口，这个就是Mac系统了，进入后有一系列设置，设置完毕进入桌面后，安装<a href="https://images.nvidia.com/mac/pkg/387/WebDriver-387.10.10.10.35.106.pkg" target="_blank" rel="noopener">显卡驱动</a>，如果没有有线网络的话，可以提前下载，或者用手机提供usb热点给电脑，不过这边需要这个<a href="https://download.csdn.net/download/mryangll/10527103" target="_blank" rel="noopener">驱动</a>。 <br>安装完显卡驱动后重启即可。</p><hr><ul><li>亮度调节工具叫做Brightness Slider，App Store就有免费的。</li><li>现在还是依赖于U盘启动，若想摆脱U盘，需要下载clover configurator，打开后选择挂载你内部磁盘的EFI，将U盘的EFI拷贝到内部磁盘EFI根目录即可。这样就可以不需要U盘了。</li><li>目前为止一直都是F9选启动方式才能进入Clover，不过可以在Window系统上添加启动项，这个我就不具体说了。</li></ul><hr><p><strong>不过我的电脑在这边碰到了一些问题，安装完显卡驱动后第一次重启正常进入系统，第二次就黑屏了，需要按电源键一下后在按一下，才显示正常，不过我发现一个避免这个问题的方式，就是进bios打开传统启动模式，这样就ok了</strong></p><p><img src="https://img-blog.csdn.net/2018070716292745?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yWWFuZ0xM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" title=""> <br>写的有点急，有问题的可以留言提问哈</p><blockquote>  <p>黑苹果推荐网站 <a href="https://tonymacx86.com" target="_blank" rel="noopener">https://tonymacx86.com</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;折腾黑苹果有风险，大家注意，文章仅供参考！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;首先先说一下尚未解决的问题（有的目前还没有人折腾出来，有的是我实在折腾不下去了…）：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1.屏幕亮度无法调节（可以勉强使用软件代替，差不
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
