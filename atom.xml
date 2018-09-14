@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-14T07:16:15.385Z</updated>
+  <updated>2018-09-14T08:09:25.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/09/14/Clover%E8%BF%9B%E5%85%A5SingleUser%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E5%86%99%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2018/09/14/Clover进入SingleUser模式无法写文件/</id>
+    <published>2018-09-14T08:14:18.339Z</published>
+    <updated>2018-09-14T08:09:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去</p><p>进入之后会有提示如何挂载根目录的操作（不是提示挂载，是提示如何挂载…），单用户模式<strong>默认是只读挂载</strong></p><p>先检查磁盘</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sbin/fsck -fy</span><br></pre></td></tr></table></figure><p>挂载根目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sbin/mount -uw /</span><br></pre></td></tr></table></figure><p>挂载移动硬盘<br>要把数据拷出来放移动硬盘上，先查看当前硬盘（单用户模式是不能用diskutil的，只能手动实现…）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /dev/ | grep disk</span><br></pre></td></tr></table></figure><p>出来的什么disk0s1和disk1s2就是磁盘了</p><p>然后插上移动硬盘，再次运行，对比新增磁盘就是你的移动硬盘了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /dev/ | grep disk</span><br></pre></td></tr></table></figure><p>我的硬盘是disk2s1，为 exFAT 格式的，把硬盘挂载到/tmp目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t exfat /dev/disk2s1 /tmp</span><br></pre></td></tr></table></figure><p>从<a href="https://tmr.js.org/p/73ace63a/转载" target="_blank" rel="noopener">https://tmr.js.org/p/73ace63a/转载</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去&lt;/p&gt;
+&lt;p&gt;进入之后会有提示如何挂载根目录的操作（不是提示挂载，是提示如何挂载…）
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

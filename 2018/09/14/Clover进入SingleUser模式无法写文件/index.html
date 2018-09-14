@@ -108,13 +108,17 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去 进入之后会有提示如何挂载根目录的操作（不是提示挂载，是提示如何挂载…），单用户模式默认是只读挂载 先检查磁盘 1/sbin/fsck -fy 挂载根目录 1/sbin/mount -uw / 挂载移动硬盘要把数">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/09/14/Clover进入SingleUser模式无法写文件/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去 进入之后会有提示如何挂载根目录的操作（不是提示挂载，是提示如何挂载…），单用户模式默认是只读挂载 先检查磁盘 1/sbin/fsck -fy 挂载根目录 1/sbin/mount -uw / 挂载移动硬盘要把数">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-14T08:09:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去 进入之后会有提示如何挂载根目录的操作（不是提示挂载，是提示如何挂载…），单用户模式默认是只读挂载 先检查磁盘 1/sbin/fsck -fy 挂载根目录 1/sbin/mount -uw / 挂载移动硬盘要把数">
 
 
 
@@ -123,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/14/Clover进入SingleUser模式无法写文件/"/>
 
 
 
@@ -133,7 +137,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -180,8 +184,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,7 +221,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
@@ -262,9 +265,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -297,10 +300,6 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/Clover进入SingleUser模式无法写文件/" itemprop="url">
-                  Untitled
-                </a>
               
             
           </h1>
@@ -363,9 +362,7 @@
       
 
       
-        
-          
-            <p>进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去</p>
+        <p>进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去</p>
 <p>进入之后会有提示如何挂载根目录的操作（不是提示挂载，是提示如何挂载…），单用户模式<strong>默认是只读挂载</strong></p>
 <p>先检查磁盘</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sbin/fsck -fy</span><br></pre></td></tr></table></figure>
@@ -380,8 +377,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t exfat /dev/disk2s1 /tmp</span><br></pre></td></tr></table></figure>
 <p>从<a href="https://tmr.js.org/p/73ace63a/转载" target="_blank" rel="noopener">https://tmr.js.org/p/73ace63a/转载</a></p>
 
-          
-        
       
     </div>
 
@@ -401,156 +396,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2018/09/14/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-09-14 15:16:15" itemprop="dateCreated datePublished" datetime="2018-09-14T15:16:15+08:00">2018-09-14</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -560,14 +427,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -771,6 +639,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 
