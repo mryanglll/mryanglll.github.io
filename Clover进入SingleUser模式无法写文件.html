@@ -1,0 +1,14 @@
+<p>进入 Clover 选中 macOS 启动项，空格进入详细模式，（Clover 里空格即是确定），选中单用户模式，然后跳回去（Return）启动 macOS，一般来说没有问题，可以直接进去</p>
+<p>进入之后会有提示如何挂载根目录的操作（不是提示挂载，是提示如何挂载…），单用户模式<strong>默认是只读挂载</strong></p>
+<p>先检查磁盘</p>
+<pre><code>/sbin/fsck -fy
+</code></pre><p>挂载根目录</p>
+<pre><code>/sbin/mount -uw /
+</code></pre><p>挂载移动硬盘<br>要把数据拷出来放移动硬盘上，先查看当前硬盘（单用户模式是不能用diskutil的，只能手动实现…）</p>
+<pre><code>ls /dev/ | grep disk
+</code></pre><p>出来的什么disk0s1和disk1s2就是磁盘了</p>
+<p>然后插上移动硬盘，再次运行，对比新增磁盘就是你的移动硬盘了</p>
+<pre><code>ls /dev/ | grep disk
+</code></pre><p>我的硬盘是disk2s1，为 exFAT 格式的，把硬盘挂载到/tmp目录</p>
+<pre><code>mount -t exfat /dev/disk2s1 /tmp
+</code></pre><p>从<a href="https://tmr.js.org/p/73ace63a/转载">https://tmr.js.org/p/73ace63a/转载</a></p>
